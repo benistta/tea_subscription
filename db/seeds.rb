@@ -1,6 +1,6 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
+
 # 5.times do
 #   Customer.create!(
 #       first_name { Faker::Name.first_name }
@@ -26,10 +26,8 @@ ActiveRecord::Base.connection.reset_pk_sequence!('teas')
 Customer.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('customers')
 
-customer = Customer.create!(first_name: 'Becks', last_name: 'yo', email: 'becks@test.com', address: 'aqui denver, co')
-
+customer = Customer.create!(first_name: 'Becks', last_name: 'yo', email: 'becks@test.com', address: 'qui denver, co')
 tea1 = Tea.create!(title: 'Mint Tea', description: 'bad', temperature: 120, brew_time: 8)
 tea2 = Tea.create!(title: 'Chai Tea', description: 'very good', temperature: 178, brew_time: 10)
-
-subscription  = customer.subscriptions.create!(title: "Becks tea selection", price: 9.89, status: 0, frequency: 0, tea_id: tea1.id)
-subscription2 = customer.subscriptions.create!(title: "Becks tea selection", price: 9.89, status: 1, frequency: 1, tea_id: tea2.id)
+subscription  = customer.subscriptions.create!(title: "Becks tea selection", price: 9.89, status: 'active', frequency: 'monthly', tea_id: tea1.id)
+subscription2 = customer.subscriptions.create!(title: "Becks tea selection", price: 9.89, status: 'cancelled', frequency: 'monthly', tea_id: tea2.id)
