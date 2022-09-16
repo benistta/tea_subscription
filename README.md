@@ -2,9 +2,10 @@
 
 ## Overview
 This app creates an API for a tea subscription service. The endpoints created are:
-An endpoint to subscribe a customer to a tea subscription.
-An endpoint to cancel a customer’s tea subscription.
-An endpoint to see all of a customer’s subsciptions (active and cancelled)
+-  An endpoint to subscribe a customer to a tea subscription.</p>
+-  An endpoint to cancel a customer’s tea subscription.</p>
+-  An endpoint to see all of a customer’s subscriptions (active and cancelled)</p>
+
 
 ## Database
 <img width="863" alt="Screen Shot 2022-09-15 at 8 00 59 PM" src="https://user-images.githubusercontent.com/92293363/190540273-99e80077-d562-4c8d-802b-de1654530cf5.png">
